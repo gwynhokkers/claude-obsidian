@@ -36,8 +36,8 @@ vault at or above the current directory. Fail closed when no vault is selected.
 
 ## Canonical skills
 
-All 15 skills live at `skills/<name>/SKILL.md`. They use the portable Agent
-Skills frontmatter subset: exactly `name` and `description`. Do not add mirrored
+Skills live at `skills/<name>/SKILL.md`. They use the portable Agent Skills
+frontmatter subset: exactly `name` and `description`. Do not add mirrored
 files under `commands/`; Claude invokes plugin skills by namespaced names such
 as `/claude-obsidian:wiki`.
 
@@ -45,6 +45,11 @@ Core workflows are `wiki`, `save`, `wiki-ingest`, `wiki-query`, and
 `wiki-lint`. Extensions are `autoresearch`, `canvas`, `defuddle`, `wiki-fold`,
 `wiki-mode`, `wiki-retrieve`, and `wiki-cli`. Reference skills are
 `obsidian-markdown`, `obsidian-bases`, and `think`.
+
+Fork additions on this checkout: `risk` (chat draft then `file it`),
+`wiki-week-prep` (Canvas week materials into Linear and study notes), and
+`docling` (PDF/Office pre-ingest convert). Prefer the mutation protocol below
+over any legacy `wiki-lock.sh` wording still present in those skill files.
 
 ## Mutation protocol
 

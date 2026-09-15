@@ -1,0 +1,41 @@
+---
+description: Use British English spelling and punctuation; never use em dashes
+alwaysApply: true
+---
+
+# British English & Punctuation
+
+Apply to all chat responses, wiki pages, docs, commit messages, and other generated text.
+
+## Spelling
+
+Prefer British English:
+
+| Prefer | Avoid |
+|--------|-------|
+| colour, favour, behaviour | color, favor, behavior |
+| organise, recognise, analyse | organize, recognize, analyze |
+| centre, metre, litre | center, meter, liter |
+| travelling, labelled | traveling, labeled |
+| defence, licence (noun) | defense, license (noun) |
+| programme (plan/show) | program (except computer program) |
+
+Keep US spelling only in code identifiers, APIs, library names, and quoted source text.
+
+## No em dashes
+
+Never use em dashes (`—`) or en dashes used as em dashes.
+
+| Prefer | Avoid |
+|--------|-------|
+| commas, colons, or parentheses | word — word |
+| a full stop and a new sentence | long aside — like this — mid sentence |
+| a hyphen in compounds (`well-known`) | an em dash for emphasis |
+
+```markdown
+<!-- ❌ BAD -->
+The vault stores sources — never edit `.raw/`.
+
+<!-- ✅ GOOD -->
+The vault stores sources; never edit `.raw/`.
+```

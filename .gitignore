@@ -21,6 +21,27 @@
 .DS_Store
 Thumbs.db
 
+# Local git worktrees
+.worktrees/
+
+# Generated graph and render output
+graphify-out/
+out/
+
+# Local Cursor setup (plans are session scratch; skills symlink is an absolute path)
+.cursor/plans/
+.cursor/skills
+skills/skills
+
+# Host-specific vault registry (absolute paths; same class as mode.json)
+.vault-meta/vault-registry.json
+
+# Personal sources dropped into the product checkout (not package material)
+.raw/handbooks/
+.raw/ProjectNetworkAON.puml
+.raw/ProjectNetworkAON-Task3.puml
+.raw/bathani-usecase-diagram.png
+
 # Python
 __pycache__/
 *.pyc

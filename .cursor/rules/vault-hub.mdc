@@ -1,0 +1,47 @@
+---
+description: Multi-vault routing hub — directs queries to Personal, University, Work, or Template vault
+alwaysApply: true
+---
+
+# Vault Hub
+
+When the user asks about knowledge stored in their second brain, route to the correct vault. Read `.vault-meta/vault-registry.json` for current paths.
+
+**Template**: `/Users/gwynforhockridge/Documents/Quibble-Vault`
+**Registry**: `/Users/gwynforhockridge/Documents/Quibble-Vault/.vault-meta/vault-registry.json`
+
+## Routing table
+
+| Topic signals | Vault |
+|---------------|-------|
+| personal, health, goals, relationships, journal, life, habits | Personal-Vault |
+| university, course, lecture, assignment, research, paper, study, exam | University-Vault |
+| work, client, project, meeting, stakeholder, deliverable, professional | Work-Vault |
+| template, spawn, skill, plugin, claude-obsidian development | Quibble-Vault (template only) |
+
+Default paths (if registry unavailable):
+
+- Personal: `~/Documents/Vaults/Personal-Vault`
+- University: `~/Documents/Vaults/University-Vault`
+- Work: `~/Documents/Vaults/Work-Vault`
+
+## Query protocol
+
+For cross-vault or ambiguous requests:
+
+1. Identify the target vault from the table above
+2. Read that vault's `wiki/hot.md` first (~500 tokens)
+3. If insufficient, read `wiki/index.md`
+4. Then drill into relevant pages
+
+When unsure which vault, ask the user.
+
+## Do NOT
+
+- File personal/work/study notes into Quibble-Vault (template only)
+- Read the wiki for general coding already in the current project
+- Modify any vault's `.raw/` directory
+
+## Code projects
+
+For app repos, add a `wiki-context.mdc` rule pointing at the registry. Work questions → Work-Vault; product domain → check registry purpose fields.
